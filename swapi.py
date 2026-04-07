@@ -18,9 +18,6 @@ class APIRequester:
 
 class SWRequester(APIRequester):
 
-    def __init__(self, base_url):
-        super().__init__(base_url)
-
     def get_sw_categories(self):
         response = requests.get(f'{self.base_url}/')
         return response.json().keys()
